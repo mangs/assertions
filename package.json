@@ -29,7 +29,7 @@
     "check:environment:versions": "check-environment-versions",
     "check:formatting": "prettier --check --no-editorconfig .",
     "check:lint-conflicts": "eslint-config-prettier ./src/index.mts",
-    "check:package-version": "scripts/bun/checkPackageVersion.mts",
+    "check:package-version": "check-package-version",
     "check:types": "tsc --noEmit",
     "delete:node-modules": "rm -rf node_modules",
     "delete:package-lock": "rm -f bun.lockb",
