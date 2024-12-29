@@ -1,0 +1,23 @@
+{
+  "cleanOutputDir": true,
+  "commentStyle": "jsdoc",
+  "disableSources": false,
+  "entryPoints": ["../../src/**/*.mts"],
+  "enumMembersFormat": "table",
+  "expandParameters": false,
+  "githubPages": false,
+  "hideBreadcrumbs": true,
+  "hidePageHeader": true,
+  "indexFormat": "list",
+  "out": "../../documentation",
+  "outputFileStrategy": "modules",
+  "parametersFormat": "table",
+  "plugin": ["typedoc-plugin-markdown", "typedoc-github-wiki-theme"],
+  "propertiesFormat": "table",
+  "readme": "none",
+  "sidebar": {
+    "autoConfiguration": false
+  },
+  "sort": ["alphabetical"],
+  "typeDeclarationFormat": "table"
+}
