@@ -1,0 +1,8 @@
+{
+  "root": true,
+  "extends": [
+    "@babbel/eslint-config/jsdoc-typescript",
+    "@babbel/eslint-config/typescript",
+    "@babbel/eslint-config/node"
+  ]
+}

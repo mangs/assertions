@@ -1,0 +1,25 @@
+name: Publish Workflow
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - name: CPU Details
+        run: lscpu
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.1.37"
+      - uses: mangs/simple-release-notes-action@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          should_auto_update_major_tag: false
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          access: public
+          registry: https://registry.npmjs.org/
+          token: ${{ secrets.NPM_TOKEN }}
