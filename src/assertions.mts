@@ -22,11 +22,11 @@ function assert(condition: boolean, message = 'Assertion condition failure'): as
  * Impose an invariant by verifying the provided value is not nullish, otherwise throw an `AssertionError`.
  * @param value Value to verify not nullish.
  */
-function assertIsNotNullish<T>(value: T): asserts value is NonNullable<T> {
+function assertNotNullish<T>(value: T): asserts value is NonNullable<T> {
   if (value === undefined || value === null) {
     throw new AssertionError(`Expected defined value but received: ${String(value)}`);
   }
 }
 
 // Module Exports
-export { assert, assertIsNotNullish };
+export { assert, assertNotNullish };
