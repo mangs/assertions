@@ -12,7 +12,7 @@ class AssertionError extends Error {
  * @param condition Condition to impose.
  * @param message   Error message to include as part of the thrown error.
  */
-function assert(condition: boolean, message = 'Assertion condition failure'): asserts condition {
+function assert(condition: unknown, message = 'Assertion condition failure'): asserts condition {
   if (!condition) {
     throw new AssertionError(message);
   }
@@ -20,13 +20,17 @@ function assert(condition: boolean, message = 'Assertion condition failure'): as
 
 /**
  * Impose an invariant by verifying the provided value is not nullish, otherwise throw an `AssertionError`.
- * @param value Value to verify not nullish.
+ * @param value   Value to verify not nullish.
+ * @param message Error message to include as part of the thrown error.
  */
-function assertNotNullish<T>(value: T): asserts value is NonNullable<T> {
+function assertNotNullish<T>(
+  value: T,
+  message = 'Non-nullish value expected',
+): asserts value is NonNullable<T> {
   if (value === undefined || value === null) {
-    throw new AssertionError(`Expected defined value but received: ${String(value)}`);
+    throw new AssertionError(message, { cause: { value } });
   }
 }
 
 // Module Exports
-export { assert, assertNotNullish };
+export { assert, AssertionError, assertNotNullish };
