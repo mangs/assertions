@@ -19,7 +19,10 @@ function assert(
   assertionFailureCause?: unknown,
 ): asserts condition {
   if (!condition) {
-    throw new AssertionError(message, { cause: assertionFailureCause });
+    throw new AssertionError(
+      message,
+      assertionFailureCause ? { cause: assertionFailureCause } : undefined,
+    );
   }
 }
 
