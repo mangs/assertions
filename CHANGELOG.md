@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+
+- Comprehensive readme update
+
 ## 1.3.0
 
 - Add an optional 3rd parameter to `assert()` to enable customizing the thrown error's `cause` field
