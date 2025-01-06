@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0
+
+- Add an optional 3rd parameter to `assert()` to enable customizing the thrown error's `cause` field
+
 ## 1.2.0
 
 - Add a build step so library consumers can use runtimes that don't support TypeScript natively
