@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0
+
+- Add a build step so library consumers can use runtimes that don't support TypeScript natively
+- Change `tsconfig.json` options to reflect Node.js best practices rather than Bun ones
+- Upgrade dependency versions to latest
+
 ## 1.1.0
 
 - Change `assert()`'s `condition` type from `boolean` to `unknown`

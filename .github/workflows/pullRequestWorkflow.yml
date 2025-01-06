@@ -22,3 +22,4 @@ jobs:
       - run: bun --bun run check:lint-conflicts
       - run: bun --bun run check:types
       - run: bun run lint:typescript
+      - run: bun run build

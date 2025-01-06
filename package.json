@@ -1,6 +1,6 @@
 {
   "name": "@mangs/assertions",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Eric L. Goldstein",
   "description": "TypeScript-based assertion functions to impose invariants",
   "engines": {
@@ -18,12 +18,15 @@
     "typescript"
   ],
   "files": [
-    "./src"
+    "./dist"
   ],
   "exports": {
-    ".": "./src/assertions.mts"
+    ".": "./dist/assertions.mjs"
   },
   "scripts": {
+    "build": "bun run --silent delete:build-directory && bun run --silent build:code && bun run --silent build:type-declarations",
+    "build:code": "esbuild src/assertions.mts --analyze --bundle --format=esm --minify --outdir=dist --out-extension:.js=.mjs --platform=neutral",
+    "build:type-declarations": "tsc",
     "check:environment": "bun --bun run --silent check:environment:symlinks && bun run --silent check:environment:versions",
     "check:environment:symlinks": "check-environment-symlinks",
     "check:environment:versions": "check-environment-versions",
@@ -31,6 +34,7 @@
     "check:lint-conflicts": "eslint-config-prettier ./src/index.mts",
     "check:package-version": "check-package-version",
     "check:types": "tsc --noEmit",
+    "delete:build-directory": "rm -rf dist",
     "delete:node-modules": "rm -rf node_modules",
     "delete:package-lock": "rm -f bun.lockb",
     "format:code": "prettier --write --no-editorconfig .",
@@ -44,9 +48,10 @@
   "devDependencies": {
     "@babbel/eslint-config": "2.2.0",
     "@mangs/bun-utils": "2.33.3",
+    "esbuild": "0.24.2",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.0",
-    "marked": "15.0.4",
+    "marked": "15.0.6",
     "prettier": "3.4.2",
     "typescript": "5.7.2"
   }
