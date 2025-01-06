@@ -9,12 +9,17 @@ class AssertionError extends Error {
 // Local Functions
 /**
  * Impose an invariant by verifying the provided condition is truthy, otherwise throw an `AssertionError`.
- * @param condition Condition to impose.
- * @param message   Error message to include as part of the thrown error.
+ * @param condition             Condition to impose.
+ * @param message               Error message to include as part of the thrown error.
+ * @param assertionFailureCause Any data that can help substantiate why this assertion failed.
  */
-function assert(condition: unknown, message = 'Assertion condition failure'): asserts condition {
+function assert(
+  condition: unknown,
+  message = 'Assertion condition failure', // eslint-disable-line default-param-last -- last 2 parameters are optional
+  assertionFailureCause?: unknown,
+): asserts condition {
   if (!condition) {
-    throw new AssertionError(message);
+    throw new AssertionError(message, { cause: assertionFailureCause });
   }
 }
 
