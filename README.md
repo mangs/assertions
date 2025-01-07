@@ -66,7 +66,7 @@ As you can see, using this library's assertion functions provides type narrowing
 - [It Takes Two to Contract](https://tigerbeetle.com/blog/2023-12-27-it-takes-two-to-contract/) by [Alex Kladov](https://matklad.github.io/about.html) at [TigerBeetle](https://tigerbeetle.com/)
   - This is a really excellent article detailing how a strong type system and proper assertions can be used in a complex codebase to ensure rock solid reliability
 - [TypeScript assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions)
-  - For some reason this is buried in the TypeScript 3.7 release notes (see the link above) and can't be found easily in the documentation
+  - For some reason this is buried in the TypeScript 3.7 release notes (see the link above) and can't be found easily in the documentation (it's [barely mentioned](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#assertion-functions) in the type narrowing section of the documentation)
 - NASA's [Power of 10: Rules for Developing Safety-Critical Code](https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code)
   - One of those rules is "Use a minimum of two runtime assertions per function". This is one of the very few examples I've found supporting runtime assertions, and it's a really good one!
   - If it's good enough to keep resource-constrained software running for decades despite the harsh conditions of space, runtime assertions are probably good enough for your website
