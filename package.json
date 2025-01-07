@@ -1,8 +1,8 @@
 {
   "name": "@mangs/assertions",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "author": "Eric L. Goldstein",
-  "description": "TypeScript-based assertion functions to impose invariants",
+  "description": "TypeScript-based assertion functions to impose invariants at runtime",
   "engines": {
     "bun": "1.1.37"
   },
