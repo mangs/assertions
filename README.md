@@ -59,7 +59,7 @@ stringOrNumber; // Type: number
 process.env.SOME_THING; // Type: string
 ```
 
-As you can see, using this library's assertion functions provides type narrowing in a more concise syntax.
+As you can see, using this library's assertion functions provides type narrowing in a more concise syntax and shows the code's true intent more clearly.
 
 ## Inspirations
 
