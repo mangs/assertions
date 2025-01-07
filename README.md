@@ -10,7 +10,7 @@ Runtime assertions are a useful tool to verify expected behavior within an appli
 
 > Besides readability, another pragmatic reason to pair assertions is robustness and defense in depth: as code is evolving and preconditions are strengthened or relaxed over time, having a separate set of assertions at each call site helps to ensure that refactoring around one call site doesn't break the other.
 
-The rough idea here is to compute the same condition in 2 different ways and assert that both are identical, thus protecting against mistakes during future refactors.
+The rough idea here is to compute the same condition in multiple ways - one for each use case - and assert that each is identical, thus ensuring correct behavior and protecting against mistakes during future refactors.
 
 For example, to assert that the number of posts added to a database never exceeds the length of the provided post array, we can do the following:
 
