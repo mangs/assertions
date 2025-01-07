@@ -71,4 +71,4 @@ As you can see, using this library's assertion functions provides type narrowing
   - One of those rules is "Use a minimum of two runtime assertions per function". This is one of the very few examples I've found supporting runtime assertions, and it's a really good one!
   - If it's good enough to keep resource-constrained software running for decades despite the harsh conditions of space, runtime assertions are probably good enough for the average application
 - Zig's [runtime assertion system](https://ziglang.org/documentation/master/std/#std.debug.assert)
-  - Yea I know, this repository is TypeScript. But this was one of the very few production examples of a runtime assertion system. Everyone else seems to use assertions for testing only which seems like a missed opportunity. Hence the recommendation to use this library as a runtime assertion library.
+  - Yea I know, this repository is TypeScript. But this was one of the very few production examples of a runtime assertion system. Everyone else seems to use assertions for testing only which seems like a missed opportunity. Hence the recommendation to use this library for runtime assertions.
