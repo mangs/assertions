@@ -64,7 +64,7 @@ As you can see, using this library's assertion functions provides type narrowing
 ## Inspirations
 
 - [It Takes Two to Contract](https://tigerbeetle.com/blog/2023-12-27-it-takes-two-to-contract/) by [Alex Kladov](https://matklad.github.io/about.html) at [TigerBeetle](https://tigerbeetle.com/)
-  - This is a really excellent article detailing how a strong type system and proper assertions can be used in a complex codebase to achieve great results
+  - This is a really excellent article detailing how a strong type system and proper assertions can be used in a complex codebase to ensure rock solid reliability
 - [TypeScript assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions)
   - For some reason this is buried in the TypeScript 3.7 release notes (see the link above) and can't be found easily in the documentation
 - NASA's [Power of 10: Rules for Developing Safety-Critical Code](https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code)
