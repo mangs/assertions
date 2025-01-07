@@ -6,6 +6,8 @@ TypeScript-based assertion functions to impose invariants at runtime
 
 JavaScript does not have native support for assertions, but TypeScript does enable [assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions) with a special `asserts condition` return syntax. This library uses the latter to create its concise syntax for writing [invariants](<https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science>) intended to guarantee characteristics of a command with precondition and postcondition assertions; the [Hoare triple](https://en.wikipedia.org/wiki/Hoare_logic#Hoare_triple) is the formalized form of this concept.
 
+## Ensuring Correct Behavior
+
 Runtime assertions are a useful tool to verify expected behavior within an application. Rather than relying on complex, ahead-of-design-time quality mechanisms like [design by contract](https://en.wikipedia.org/wiki/Design_by_contract), strong typing and well-placed assertions on their own can be a capable, lower effort substitute. Specifically, a real contract is established with at least 2 assertions checking each condition: 1 at the call site and 1 at the definition site. The article [It Takes Two to Contract](https://tigerbeetle.com/blog/2023-12-27-it-takes-two-to-contract/) offers a great description for this duo's importance:
 
 > Besides readability, another pragmatic reason to pair assertions is robustness and defense in depth: as code is evolving and preconditions are strengthened or relaxed over time, having a separate set of assertions at each call site helps to ensure that refactoring around one call site doesn't break the other.
