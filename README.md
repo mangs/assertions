@@ -29,7 +29,7 @@ assert(rowsAdded <= postList.length);
 
 ## Type Narrowing With Less Code
 
-Typically, TypeScript requires conditional statement and possibly a thrown error to properly [narrow types](https://www.typescriptlang.org/docs/handbook/2/narrowing.html). Instead, assertion functions are a more concise way to accomplish the same thing without any nesting. For example:
+Typically, TypeScript requires a conditional statement and possibly a thrown error to properly [narrow a type](https://www.typescriptlang.org/docs/handbook/2/narrowing.html). Instead, assertion functions are a more concise way to accomplish the same thing without any nesting. For example:
 
 ```ts
 stringOrNumber; // Type: string | number
