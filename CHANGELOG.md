@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0
+
+- Add source maps to build process
+- Upgrade dependency versions to latest
+
 ## 1.3.1
 
 - Comprehensive readme update
